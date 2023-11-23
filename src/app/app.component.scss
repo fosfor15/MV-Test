@@ -1,0 +1,65 @@
+
+@mixin flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    @include flex-container;
+    align-items: center;
+    row-gap: 16px;
+
+    width: fit-content;
+    margin: 100px auto;
+
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px
+}
+
+.form-control {
+    @include flex-container;
+    row-gap: 4px;
+}
+
+input#name {
+    padding: 4px 6px;
+    border: 1.5px solid #5e5e5e;
+    border-radius: 4px;
+    background-color: rgb(247, 254, 254);
+
+    &:focus {
+        outline: 1.5px solid rgb(189, 239, 239);
+        outline-offset: 1px;
+    }
+}
+
+button {
+    padding: 4px 10px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 2px 7px -8px black;
+    background-color: rgb(160, 242, 242);
+}
+
+.name-message,
+.error-message,
+.timer {
+    padding: 10px;
+    border-width: 1.5px;
+    border-style: solid;
+    border-radius: 6px;
+
+    text-align: center;
+}
+
+.name-message {
+    border-color: green;
+}
+
+.error-message {
+    border-color: orange;
+}
+
+.timer {
+    border-color: blue;
+}

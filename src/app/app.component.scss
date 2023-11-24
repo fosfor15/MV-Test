@@ -1,11 +1,11 @@
 
-@mixin flex-container {
+form,
+.form-control {
     display: flex;
     flex-direction: column;
 }
 
 form {
-    @include flex-container;
     align-items: center;
     row-gap: 16px;
 
@@ -17,7 +17,6 @@ form {
 }
 
 .form-control {
-    @include flex-container;
     row-gap: 4px;
 }
 
